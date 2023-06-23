@@ -37,23 +37,28 @@ const initSwiperSliders = () => {
   });
 }
 
-
+let timeout
 
 const initCardsScrollAnimation = () => {
   $('.fp-overflow').on('scroll', event => {
     const scroll = event.target.scrollTop;
     const clientHeight = window.innerHeight;
-    const activeSection = Math.ceil(scroll / clientHeight) + 1;
+    const activeSection = Math.ceil(scroll / clientHeight);
 
-    console.log(activeSection);
+    console.log(activeSection, scroll);
 
     if (scroll > lastScrollTop) {
       // downscroll code
       if (activeSection === 6) {
         fullpage_api.moveTo(4, 0);
+        clearTimeout(timeout);
       }
     } else if (scroll < lastScrollTop) {
-      if (scroll <= 5) {
+      if (activeSection !== 1) {
+        clearTimeout(timeout);
+      }
+      // upscroll code
+      if (activeSection === 0 && scroll < 20) {
         console.log('sdfdsfsdfsd');
         fullpage_api.moveTo(2, 0);
       }
