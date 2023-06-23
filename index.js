@@ -53,7 +53,8 @@ const initCardsScrollAnimation = () => {
         fullpage_api.moveTo(4, 0);
       }
     } else if (scroll < lastScrollTop) {
-      if (scroll === 0) {
+      if (scroll <= 5) {
+        console.log('sdfdsfsdfsd');
         fullpage_api.moveTo(2, 0);
       }
     }
