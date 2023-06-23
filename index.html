@@ -17,12 +17,12 @@
 
 <body>
   <div id="fullpage">
-    <section class="section">
+    <section class="section" data-anchor="pre-slider">
       <h1>
         Прокрути нижче для слайдера
       </h1>
     </section>
-    <section class="section swiper-wrap">
+    <section class="section swiper-wrap" data-anchor="slider">
       <section class="swiper-inner">
         <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
           <div class="swiper-wrapper">
@@ -94,12 +94,37 @@
         </div>
       </section>
     </section>
-    <section class="section">
+    <section class="section" data-anchor="cards">
+      <div class="cards__track">
+        <div class="cards__triggers">
+          <div class="card__trigger"></div>
+          <div class="card__trigger"></div>
+          <div class="card__trigger"></div>
+          <div class="card__trigger"></div>
+          <div class="card__trigger"></div>
+        </div>
+        <div class="cards__sticky">
+          <h1>А-ля геймплей картки</h1>
+          <div class="cards">
+            <div class="card card-1">01</div>
+            <div class="card card-2">02</div>
+            <div class="card card-3">03</div>
+            <div class="card card-4">04</div>
+            <div class="card card-5">05</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" data-anchor="after-cards">
+      <h1>Секція після карток</h1>
+    </section>
+
+    <section class="section" data-anchor="pre-horizontal-scroll">
       <h1>
         Прокрути нижче для Горизонтального скролла
       </h1>
     </section>
-    <section class="section">
+    <section class="section" data-anchor="horizontal-scroll">
       <div class="horizontal-wrap">
         <div class="horizontal-inner">
           <h1>
@@ -118,13 +143,23 @@
   </div>
 
   <!-- === CDN SCRIPTS === -->
+  <!-- JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- FULL PAGE -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
     integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- SWIPER -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+  <!-- SCROLL TRIGGER -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+  <!-- === SCROLL TO === -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollToPlugin.min.js"></script>
+
   <!-- === CUSTOM SCRIPTS === -->
   <script src="./index.js"></script>
 </body>
