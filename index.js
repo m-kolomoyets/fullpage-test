@@ -53,7 +53,9 @@ const initCardsScrollAnimation = () => {
         fullpage_api.moveTo(4, 0);
       }
     } else if (scroll < lastScrollTop) {
-      // upscroll code
+      if (scroll === 0) {
+        fullpage_api.moveTo(2, 0);
+      }
     }
     lastScrollTop = scroll <= 0 ? 0 : scroll; // For Mobile or negative scrolling
 
