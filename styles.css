@@ -207,7 +207,7 @@ h1 {
 }
 
 
-.card.inactive {
+.card:not(:last-child).inactive {
   background-color: #5f73fb;
 }
 
